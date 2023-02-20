@@ -17,8 +17,7 @@ import {
   BookmarkBorderOutlined,
   SubscriptionsOutlined,
   DynamicFeedOutlined,
-  InfoRounded,
-  Height
+  Search
 } from '@mui/icons-material'
 import { Card, CardMedia, Drawer, ListItem, ListItemIcon, ListItemText } from '@mui/material'
 
@@ -56,7 +55,7 @@ export default function Header() {
   )
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ bgcolor: '#1A1A1A' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -105,6 +104,13 @@ export default function Header() {
               </Card>
               {getList()}
             </Drawer>
+            <div style={{ flexGrow: 1 }} />
+            <IconButton color="inherit">
+              <NotificationsNoneOutlined />
+            </IconButton>
+            <IconButton aria-label="search" color="inherit" size="large">
+              <Search />
+            </IconButton>
           </Box>
         </Toolbar>
       </Container>
