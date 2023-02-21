@@ -1,15 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ProductType } from 'global/interfaces/productsInterfaces'
-import {
-  Box,
-  Card,
-  CardActionArea,
-  Grid,
-  Hidden,
-  ImageList,
-  ImageListItem,
-  Typography
-} from '@mui/material'
+import { Box, ImageList, ImageListItem, Typography } from '@mui/material'
 
 import { theme } from '../../global/theme/theme'
 import Product from '../Product/Product'

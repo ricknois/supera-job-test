@@ -4,12 +4,9 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Avatar from '@mui/material/Avatar'
-import Tooltip from '@mui/material/Tooltip'
-import MenuItem from '@mui/material/MenuItem'
 import {
   PaymentsOutlined,
   SettingsOutlined,
@@ -17,14 +14,23 @@ import {
   BookmarkBorderOutlined,
   SubscriptionsOutlined,
   DynamicFeedOutlined,
-  Search
+  Search,
+  ShoppingCart
 } from '@mui/icons-material'
-import { Card, CardMedia, Drawer, ListItem, ListItemIcon, ListItemText } from '@mui/material'
+import {
+  BadgeProps,
+  Card,
+  Drawer,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  styled,
+  Badge
+} from '@mui/material'
+import { useContext, useState } from 'react'
 
 import { theme } from '../../global/theme/theme'
-
-const pages = ['Products', 'Pricing', 'Blog']
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
+import CartContext from '../../context/cart/CartContext'
 
 const iconsStyle = { fontSize: 40, color: theme.colors.white }
 
@@ -38,7 +44,8 @@ const data = [
 ]
 
 export default function Header() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
+  const { cartSize } = useContext(CartContext)
 
   const getList = () => (
     <div
@@ -53,6 +60,15 @@ export default function Header() {
       ))}
     </div>
   )
+
+  const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
+    '& .MuiBadge-badge': {
+      right: -3,
+      top: 13,
+      border: `1px solid ${theme.palette.background.default}`,
+      padding: '0 4px'
+    }
+  }))
 
   return (
     <AppBar position="static" sx={{ bgcolor: '#1A1A1A' }}>
@@ -105,8 +121,10 @@ export default function Header() {
               {getList()}
             </Drawer>
             <div style={{ flexGrow: 1 }} />
-            <IconButton color="inherit">
-              <NotificationsNoneOutlined />
+            <IconButton aria-label="cart" color="inherit" size="large">
+              <StyledBadge badgeContent={cartSize} color="primary">
+                <ShoppingCart />
+              </StyledBadge>
             </IconButton>
             <IconButton aria-label="search" color="inherit" size="large">
               <Search />

@@ -2,10 +2,11 @@ import { ProductType } from 'global/interfaces/productsInterfaces'
 import { useLocation } from 'react-router-dom'
 import { Alert, Box, Button, Card, CardMedia, Collapse, Grid, Typography } from '@mui/material'
 import { ShoppingCartOutlined } from '@mui/icons-material/'
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { Header } from '../../components/'
 import { theme } from '../../global/theme/theme'
+import CartContext from '../../context/cart/CartContext'
 
 export type LocationParams = {
   pathname: string
@@ -18,9 +19,11 @@ export type LocationParams = {
 export default function ProductDetails() {
   const { state } = useLocation() as LocationParams
   const [open, setOpen] = React.useState(false)
+  const { addToCart } = useContext(CartContext)
 
   const handleCartButton = () => {
     setOpen(true)
+    addToCart(state)
     setTimeout(() => {
       setOpen(false)
     }, 3000)
