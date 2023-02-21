@@ -28,6 +28,7 @@ import {
   Badge
 } from '@mui/material'
 import { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { theme } from '../../global/theme/theme'
 import CartContext from '../../context/cart/CartContext'
@@ -46,6 +47,7 @@ const data = [
 export default function Header() {
   const [open, setOpen] = useState(false)
   const { cartSize } = useContext(CartContext)
+  const navigation = useNavigate()
 
   const getList = () => (
     <div
@@ -121,7 +123,12 @@ export default function Header() {
               {getList()}
             </Drawer>
             <div style={{ flexGrow: 1 }} />
-            <IconButton aria-label="cart" color="inherit" size="large">
+            <IconButton
+              aria-label="cart"
+              color="inherit"
+              size="large"
+              onClick={() => navigation('/cart')}
+            >
               <StyledBadge badgeContent={cartSize} color="primary">
                 <ShoppingCart />
               </StyledBadge>

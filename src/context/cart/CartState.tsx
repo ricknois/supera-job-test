@@ -10,7 +10,32 @@ export const REMOVE_ITEM = 'REMOVE_ITEM'
 const CartState = ({ children }) => {
   const initalState = {
     cartSize: 0,
-    cartItems: []
+    cartItems: [
+      // {
+      //   id: 201,
+      //   image: 'call-of-duty-infinite-warfare.png',
+      //   name: 'Call Of Duty Infinite Warfare',
+      //   price: 49.99,
+      //   quantity: 4,
+      //   score: 80
+      // },
+      // {
+      //   id: 312,
+      //   image: 'super-mario-odyssey.png',
+      //   name: 'Super Mario Odyssey',
+      //   price: 197.88,
+      //   quantity: 1,
+      //   score: 100
+      // },
+      // {
+      //   id: 311,
+      //   image: 'super-mario-odyssey.png',
+      //   name: 'Super Mario Odyssey',
+      //   price: 197.88,
+      //   quantity: 1,
+      //   score: 100
+      // }
+    ]
   }
 
   const [state, dispatch] = useReducer(CartReducer, initalState)

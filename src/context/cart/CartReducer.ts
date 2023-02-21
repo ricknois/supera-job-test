@@ -25,27 +25,27 @@ const CartReducer = (state, action) => {
         cartSize: state.cartSize++
       }
     }
-    // case REMOVE_ITEM: {
-    //   // const updatedCart = [...state.cartItems]
-    //   // const updatedItemIndex = updatedCart.findIndex((item) => item.id === action.payload.id)
+    case REMOVE_ITEM: {
+      const updatedCart = [...state.cartItems]
+      const updatedItemIndex = updatedCart.findIndex((item) => item.id === action.payload)
 
-    //   // if (updatedItemIndex < 0) {
-    //   //   updatedCart.push({ ...action.payload, quantity: 1 })
-    //   // } else {
-    //   //   const updatedItem = {
-    //   //     ...updatedCart[updatedItemIndex]
-    //   //   }
+      if (updatedCart[updatedItemIndex].quantity === 1) {
+        updatedCart.splice(updatedItemIndex, 1)
+      } else {
+        const updatedItem = {
+          ...updatedCart[updatedItemIndex]
+        }
 
-    //   //   updatedItem.quantity++
-    //   //   updatedCart[updatedItemIndex] = updatedItem
-    //   // }
+        updatedItem.quantity--
+        updatedCart[updatedItemIndex] = updatedItem
+      }
 
-    //   // return {
-    //   //   ...state,
-    //   //   cartItems: [...updatedCart],
-    //   //   cartSize: state.cartSize++
-    //   // }
-    // }
+      return {
+        ...state,
+        cartItems: [...updatedCart],
+        cartSize: state.cartSize--
+      }
+    }
 
     default:
       return state

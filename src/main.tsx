@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './main.css'
 
 import CartState from './context/cart/CartState'
-import { Home, ProductDetails } from './pages'
+import { Cart, Home, ProductDetails } from './pages'
 
 createRoot(document.getElementById('root') as Element).render(
   <React.StrictMode>
@@ -15,6 +15,7 @@ createRoot(document.getElementById('root') as Element).render(
         <Routes>
           <Route element={<Home />} path="/" />
           <Route element={<ProductDetails />} path="/product/:id" />
+          <Route element={<Cart />} path="/cart" />
         </Routes>
       </BrowserRouter>
     </CartState>
