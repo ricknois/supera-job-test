@@ -1,51 +1,34 @@
-import { useReducer } from 'react'
+import { ReactNode, Reducer, useReducer } from 'react'
+import { ProductType } from 'global/interfaces/productsInterfaces'
 
-import CartContext from './CartContext'
+import CartContext, { MyContextProps } from './CartContext'
 import CartReducer from './CartReducer'
 
-export const SHOW_HIDE_CART = 'SHOW_HIDE_CART'
-export const ADD_TO_CART = 'ADD_TO_CART'
-export const REMOVE_ITEM = 'REMOVE_ITEM'
+export enum actionTypes {
+  ADD_TO_CART,
+  REMOVE_ITEM
+}
 
-const CartState = ({ children }) => {
-  const initalState = {
+type MyProviderProps = {
+  children: ReactNode
+}
+
+const CartState = ({ children }: MyProviderProps) => {
+  const initalState: MyContextProps = {
     cartSize: 0,
-    cartItems: [
-      // {
-      //   id: 201,
-      //   image: 'call-of-duty-infinite-warfare.png',
-      //   name: 'Call Of Duty Infinite Warfare',
-      //   price: 49.99,
-      //   quantity: 4,
-      //   score: 80
-      // },
-      // {
-      //   id: 312,
-      //   image: 'super-mario-odyssey.png',
-      //   name: 'Super Mario Odyssey',
-      //   price: 197.88,
-      //   quantity: 1,
-      //   score: 100
-      // },
-      // {
-      //   id: 311,
-      //   image: 'super-mario-odyssey.png',
-      //   name: 'Super Mario Odyssey',
-      //   price: 197.88,
-      //   quantity: 1,
-      //   score: 100
-      // }
-    ]
+    cartItems: [],
+    addToCart: () => null,
+    removeItem: () => null
   }
 
-  const [state, dispatch] = useReducer(CartReducer, initalState)
+  const [state, dispatch] = useReducer<Reducer<any, any>>(CartReducer, initalState)
 
-  const addToCart = (item) => {
-    dispatch({ type: ADD_TO_CART, payload: item })
+  const addToCart = (item: ProductType) => {
+    dispatch({ type: actionTypes.ADD_TO_CART, payload: item })
   }
 
-  const removeItem = (id) => {
-    dispatch({ type: REMOVE_ITEM, payload: id })
+  const removeItem = (id: number) => {
+    dispatch({ type: actionTypes.REMOVE_ITEM, payload: id })
   }
 
   return (

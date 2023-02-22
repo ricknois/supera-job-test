@@ -16,7 +16,7 @@ export default function Product({ image, name, price, id, score }: ProductType) 
 
   return (
     <CardActionArea
-      sx={{ mr: 2, background: 'transparent', padding: 1, flex: 1 }}
+      sx={{ mr: 2, background: 'transparent', padding: 1, flex: 1, paddingX: { md: 5 } }}
       onClick={() => navigation(`/product/${id}`, { state: { image, name, price, id, score } })}
     >
       <CardMedia
@@ -28,18 +28,37 @@ export default function Product({ image, name, price, id, score }: ProductType) 
       <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', mt: 0.5 }}>
         <Typography
           component="div"
-          sx={{ fontWeight: 600, fontSize: 13, textAlign: 'center', color: theme.colors.white }}
+          sx={{
+            fontWeight: 600,
+            fontSize: 13,
+            textAlign: 'center',
+            color: theme.colors.white,
+            display: { md: 'none' }
+          }}
         >
           {handleTitle(name)}
         </Typography>
         <Typography
           component="div"
           sx={{
-            fontSize: 11,
+            fontWeight: 600,
+            fontSize: 17,
+            textAlign: 'center',
+            color: theme.colors.white,
+            display: { xs: 'none', md: 'block' }
+          }}
+        >
+          {name}
+        </Typography>
+        <Typography
+          component="div"
+          sx={{
+            fontSize: { xs: 11, md: 15 },
             position: 'absolute',
             bottom: 0,
             right: 22,
-            color: theme.colors.white
+            color: theme.colors.white,
+            paddingX: { md: 5 }
           }}
         >
           {`R$ ${price.toString().replace('.', ',')}`}

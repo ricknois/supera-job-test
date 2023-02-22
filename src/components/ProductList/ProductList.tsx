@@ -26,7 +26,8 @@ export default function ProductList() {
         fontSize: 20,
         color: theme.colors.white,
         fontWeight: 600,
-        mt: 2
+        mt: 2,
+        marginX: { md: 30 }
       }}
     >
       {title}
@@ -46,10 +47,11 @@ export default function ProductList() {
     return (
       <ImageList
         cols={1}
-        rowHeight={255}
         sx={{
           display: 'flex',
+          marginX: { md: 30 },
           mt: 0.5,
+          height: { xs: 255, md: 300 },
           overflowY: 'hidden',
           flexDirection: 'row',
           '::-webkit-scrollbar': {

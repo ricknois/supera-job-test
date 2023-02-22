@@ -1,10 +1,9 @@
-export const SHOW_HIDE_CART = 'SHOW_HIDE_CART'
-export const ADD_TO_CART = 'ADD_TO_CART'
-export const REMOVE_ITEM = 'REMOVE_ITEM'
+import { MyContextProps } from './CartContext'
+import { actionTypes } from './CartState'
 
-const CartReducer = (state, action) => {
+const CartReducer = (state: MyContextProps, action: any) => {
   switch (action.type) {
-    case ADD_TO_CART: {
+    case actionTypes.ADD_TO_CART: {
       const updatedCart = [...state.cartItems]
       const updatedItemIndex = updatedCart.findIndex((item) => item.id === action.payload.id)
 
@@ -15,7 +14,9 @@ const CartReducer = (state, action) => {
           ...updatedCart[updatedItemIndex]
         }
 
-        updatedItem.quantity++
+        if (updatedItem.quantity) {
+          updatedItem.quantity++
+        }
         updatedCart[updatedItemIndex] = updatedItem
       }
 
@@ -25,7 +26,7 @@ const CartReducer = (state, action) => {
         cartSize: state.cartSize++
       }
     }
-    case REMOVE_ITEM: {
+    case actionTypes.REMOVE_ITEM: {
       const updatedCart = [...state.cartItems]
       const updatedItemIndex = updatedCart.findIndex((item) => item.id === action.payload)
 
@@ -36,7 +37,9 @@ const CartReducer = (state, action) => {
           ...updatedCart[updatedItemIndex]
         }
 
-        updatedItem.quantity--
+        if (updatedItem.quantity) {
+          updatedItem.quantity--
+        }
         updatedCart[updatedItemIndex] = updatedItem
       }
 

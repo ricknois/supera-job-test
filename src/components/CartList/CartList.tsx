@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardMedia, IconButton, Typography } from '@mui/material'
+import { Box, Card, CardMedia, IconButton, Typography } from '@mui/material'
 import { Add, Remove } from '@mui/icons-material'
 import { useContext } from 'react'
 

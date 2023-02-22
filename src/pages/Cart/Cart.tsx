@@ -36,7 +36,7 @@ export default function Cart() {
         cols={1}
         sx={{
           mt: 0.5,
-          flexDirection: 'row',
+          marginX: { md: '15vw' },
           '::-webkit-scrollbar': {
             display: 'none'
           }

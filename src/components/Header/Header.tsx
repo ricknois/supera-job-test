@@ -1,4 +1,3 @@
-import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -46,6 +45,7 @@ const data = [
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+
   const { cartSize } = useContext(CartContext)
   const navigation = useNavigate()
 
@@ -74,19 +74,29 @@ export default function Header() {
 
   return (
     <AppBar position="static" sx={{ bgcolor: '#1A1A1A' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: 'flex' }}>
             <IconButton
               aria-controls="menu-appbar"
               aria-haspopup="true"
               aria-label="account of current user"
               color="inherit"
               size="large"
+              sx={{ display: { md: 'none' } }}
               onClick={() => setOpen(true)}
             >
               <MenuIcon />
             </IconButton>
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row' }}>
+              {data.map((item, index) => (
+                <>
+                  <IconButton key={index} aria-label="search" color="inherit" size="large">
+                    {item.icon}
+                  </IconButton>
+                </>
+              ))}
+            </Box>
             <Drawer
               PaperProps={{
                 sx: {
