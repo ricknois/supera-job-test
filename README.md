@@ -1,245 +1,118 @@
-<div id="top"></div>
+<h1 align="center">
+   Supera Job Test
+</h1>
 
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+<h3 align="center">
+    A React app that uses an JSON API to create a game shop
+</h3>
 
 <p align="center">
-  <a href="https://github.com/Drumpy/vrttv-boilerplate/stargazers">
-    <img src="https://img.shields.io/github/stars/Drumpy/vrttv-boilerplate.svg?style=for-the-badge" />
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ricknois/supera-job-test?color=%2304D361">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ricknois/supera-job-test">
+  
+  <a href="https://github.com/ricknois/supera-job-test/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ricknois/supera-job-test">
   </a>
-  <a href="https://github.com/Drumpy/vrttv-boilerplate/issues">
-    <img src="https://img.shields.io/github/issues/Drumpy/vrttv-boilerplate.svg?style=for-the-badge" />
+
+  <a href="https://ricknois.github.io/">
+    <img alt="made by Rick Sousa" src="https://img.shields.io/badge/made%20by-Rick Sousa-%237519C1">
   </a>
+  
+<h4 align="center">
+  Status: Finished
+</h4>
+
+<p align="center">
+ <a href="#about">About</a> •
+ <a href="#features">Features</a> •
+ <a href="#layout">Layout</a> •
+ <a href="#tech-stack">Tech Stack</a> •
+ <a href="#author">Author</a> •
+
 </p>
 
-<!-- PROJECT LOGO -->
-<div align="center">
-  <a href="#">
-    <img src="https://i.ibb.co/mqPXzct/VRTTV-Banner.png" alt="VRTTV Banner">
-  </a>
+## About
 
-  <h2 align="center">VRTTV Boilerplate</h2>
-  <p align="center">
-    Avoid setting up a project from scratch. Start using VRTTV 🎉
-    <br />
-    <br />
-    <a href="https://vrttv-boilerplate.vercel.app/">View Demo</a>
-    ·
-    <a href="https://github.com/Drumpy/vrttv-boilerplate/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Drumpy/vrttv-boilerplate/issues">Request Feature</a>
-  </p>
-</div>
+Supera job test it`s a React with Typescript app that uses an API to create a game shop
 
-<!-- ABOUT THE PROJECT -->
+---
 
-# 🤔 What’s this?
+## Features
 
-Are you tired of always creating the same structure from scratch for your projects? Me too. 🥱
+- [x] The app has three endpoints:
+  - [x] "/" Home
+  - [x] "/producsts/id" Product detail
+  - [x] "/cart" Cart
+-
 
-This is my _go-to_ when I start a new project on front-end development.
+---
 
-If you found it useful somehow, I would be grateful if you could leave a star in the project's GitHub repository 💚
+## Layout
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="center">
+  <img alt="layout" title="#App" src="./screenshots/01.png" width="200px">
 
-# 🔮 What’s inside?
+  <img alt="layout" title="#App" src="./screenshots/04.png" width="200px">
+  
+  <img alt="layout" title="#App" src="./screenshots/02.png" width="200px">
 
-- ⚡ [Vite](https://vitejs.dev/) - Next generation frontend tooling.
-  - 📦 [Imagemin](https://github.com/vbenjs/vite-plugin-imagemin) - Plugin for compressing image assets.
-  - 📦 [Vite Plugin HTML](https://github.com/vbenjs/vite-plugin-html) - Plugin for processing HTML with minify.
-- 🌟 [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
-- 🔀 [React Router](https://reactrouter.com/docs/en/v6/getting-started/overview) - Declarative routing for React apps at any scale.
-- 💜 [TypeScript](https://www.typescriptlang.org/) - A superset of JavaScript.
-- 🎨 [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework.
-- ⚙️ [Babel](https://babeljs.io/) with [preset-env](https://babeljs.io/docs/en/babel-preset-env) - The compiler for next generation JavaScript.
-- 💅 [Prettier](https://prettier.io/) - Opinionated Code Formatter.
-- 🔍 [ESLint](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-  - 📦 [Simple Import Sort](https://github.com/lydell/eslint-plugin-simple-import-sort/) - Easy autofixable import sorting.
-  - 📦 [Import Plugin](https://github.com/benmosher/eslint-plugin-import/) - Rules that help validate proper imports.
-  - 📦 [Tailwind Plugin](https://github.com/francoismassart/eslint-plugin-tailwindcss/) - Plugin for Tailwind CSS usage.
-  - And a few other ES2015+ related rules.
-- 🐶 [Husky](https://github.com/typicode/husky) - Git hooks made easy.
-  - 🪝 commit-msg
-  - 🪝 pre-commit
-- 🚫 [Lint Staged](https://github.com/okonet/lint-staged) - Run linters on git staged files.
-- ✍️ [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) with 🎉 [Gitmoji](https://gitmoji.dev/) - A specification for adding human and machine readable meaning to commit messages.
-- 🚦 [GitHub Actions](https://github.com/features/actions) - Automate your workflow on GitHub.
-- 🔺 [Vercel](https://vercel.com/) - Deploy your application on Vercel.
+  <img alt="layout" title="#App" src="./screenshots/03.png" width="200px">
+  
+</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+---
 
-<!-- GETTING STARTED -->
+### Pre-requisites
 
-# 🚀 Getting Started
+Before you begin, you will need to have the following tools installed on your machine:
+[Git] (<https://git-scm.com>),
+[NPM] (<https://nodejs.org/>),
+In addition, it is good to have an editor to work with the code like [VSCode] (<https://code.visualstudio.com/>)
 
-These are the necessary steps to use 💯 of the potential of this boilerplate.
-
-## 🚨 Prerequisites
-
-You need this technologies :
-
-- [Node 16>=](https://nodejs.org/en/)
-- [Git](https://git-scm.com/downloads/)
-- [Vercel Account](https://vercel.com/signup)
-- [Vercel CLI](https://vercel.com/cli)
-- [Gitmoji CLI](https://github.com/carloscuesta/gitmoji-cli#install)
-
-## 💻 Run Locally
-
-1. Option 1: Generate a new repository with this template
-
-- [Use this template](https://github.com/Drumpy/vrttv-boilerplate/generate)
-
-1. Option 2: Copy just the project scaffolding.
+#### Running the app (Web)
 
 ```bash
-npx --yes degit Drumpy/vrttv-boilerplate your-folder-name
+
+# Clone this repository
+$ git clone git@github.com:ricknois/supera-job-test.git
+
+# Install Json Server
+$ npm install -g json-server
+
+# Access the project folder in your terminal
+$ cd supera-job-test
+
+# Install the dependencies
+$ npm i
+
+# Run the api 
+$ json-server --watch ./src/services/db/products.json
+
+# Run the application in development mode
+$ npm run dev
+
+# Access http://localhost:5173/
+
 ```
 
-1. Option 3: Clone the entire repository.
+---
 
-```bash
-git clone https://github.com/Drumpy/vrttv-boilerplate
-```
+## Tech Stack
 
-2. Go to the project directory.
+The following tools were used in the construction of the project:
 
-```bash
-cd vrttv-boilerplate
-```
+**Web**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
 
-3. Install dependencies.
+- **[Material UI](https://mui.com/)**
 
-```bash
-npm install
-```
+---
 
-4. Start the server.
+## Author
 
-```bash
-npm run dev
-```
+ <sub><b>Rick Sousa</b></sub>
+ <br/>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Made with love by Rick Sousa [Get in Touch!](https://www.linkedin.com/in/ricknois/)
 
-## ⚙️ Setup GitHub Actions
-
-1. Run Vercel CLI in your project folder. After completed, a folder **.vercel** is created in your root directory.
-
-```bash
-vercel --confirm
-```
-
-2. Go to actions secrets in your GitHub Repository.
-
-```bash
-https://github.com/your-username/your-repo-name/settings/secrets/actions/new
-```
-
-3. Add this three tokens.
-
-```bash
-# Generate this in https://vercel.com/account/tokens
-VERCEL_TOKEN
-```
-
-```bash
-# It is located in 'project.json' inside the '.vercel' folder
-ORG_ID
-```
-
-```bash
-# It is located in 'project.json' inside the '.vercel' folder
-PROJECT_ID
-```
-
-### 💡 **Tip!**
-
-You can skip GitHub Action execution by adding **[skip ci]** to your commit message.
-
-```bash
-style: change the colors of the theme [skip ci]
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## 🐕‍🦺 Setup Husky
-
-1. Run Husky command.
-
-```bash
-npx --yes husky install
-```
-
-2. Use Gitmoji CLI to commit changes.
-
-```bash
-gitmoji -c
-```
-
-3. Write your commits following the rules of [Conventional Commit](https://github.com/Drumpy/vrttv-boilerplate#-conventional-commit-rules). Examples:
-
-```bash
-feat: added navbar component
-```
-
-```bash
-fix(navbar): fixed all the broken links
-```
-
-### 👇 Creating a commit as an example
-
-<img src="https://i.ibb.co/1dBhQ51/Windows-Terminal-wmp-Pxe1-Q3u.gif"/>
-
-### 📜 Conventional Commit Rules
-
-Use this table as a reference when writing commits. Husky will be in charge of checking that the rules will be followed.
-
-| Commit Type | Title                    | Description                                                                                                 | Emoji |
-| ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- | :---: |
-| `feat`      | Features                 | A new feature                                                                                               |  ✨   |
-| `fix`       | Bug Fixes                | A bug fix                                                                                                   |  🐛   |
-| `docs`      | Documentation            | Documentation only changes                                                                                  |  📝   |
-| `style`     | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |  🎨   |
-| `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   |  ♻️   |
-| `perf`      | Performance Improvements | A code change that improves performance                                                                     |  ⚡   |
-| `test`      | Tests                    | Adding missing tests or correcting existing tests                                                           |  ✅   |
-| `build`     | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |  🚨   |
-| `ci`        | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |  👷   |
-| `chore`     | Chores                   | Other changes that don't modify src or test files                                                           |  ➕   |
-| `revert`    | Reverts                  | Reverts a previous commit                                                                                   |  ⏪   |
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- GitHhub Actions Pipeline -->
-
-# ♾️ GitHub Actions Deployment Pipeline
-
-- 🛑 Cancel Previous Redundant Builds
-- 📝 Assign PR to creator
-- 💅🏼 Linting
-- 🔗 Deploy to Vercel
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTACT -->
-
-# 📧 Contact
-
-Diego Do Santos - ddosantos@hotmail.com
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/Drumpy/vite-boilerplate.svg?style=for-the-badge
-[contributors-url]: https://github.com/Drumpy/vrttv-boilerplate/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Drumpy/vrttv-boilerplate.svg?style=for-the-badge
-[product-screenshot]: https://i.ibb.co/zf7gjMR/Card-Outline.png
+---

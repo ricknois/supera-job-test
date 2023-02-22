@@ -60,7 +60,7 @@ export default function ProductDetails() {
           <Typography
             sx={{
               fontWeight: 600,
-              mt: 2,
+              mt: { xs: 0, md: 2 },
               mb: 2,
               fontSize: { xs: 30, md: 38 },
               marginX: { xs: 0, md: 2 },
@@ -100,7 +100,7 @@ export default function ProductDetails() {
           <Typography
             sx={{
               fontWeight: 600,
-              fontSize: 24,
+              fontSize: { xs: 15, md: 24 },
               color: theme.colors.white,
               textAlign: 'right',
               width: '100%',
